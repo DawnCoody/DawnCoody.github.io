@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="[toc] 1. 介绍 优势   大部分操作在本地完成 完整性保证 尽可能添加数据而不是删除或修改数据 分支操作非常快捷流畅 与 Linux 命令全面兼容  Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/02/09/Git/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[toc] 1. 介绍 优势   大部分操作在本地完成 完整性保证 尽可能添加数据而不是删除或修改数据 分支操作非常快捷流畅 与 Linux 命令全面兼容  Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subv">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142815118.png">
+<meta property="og:image" content="c:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142851974.png">
+<meta property="og:image" content="c:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142910638.png">
+<meta property="og:image" content="c:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143008030.png">
+<meta property="og:image" content="c:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143032595.png">
+<meta property="og:image" content="c:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143054669.png">
+<meta property="og:image" content="c:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143108158.png">
+<meta property="og:image" content="c:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143119699.png">
+<meta property="og:image" content="c:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143138813.png">
+<meta property="og:image" content="c:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019153835539.png">
+<meta property="article:published_time" content="2023-02-09T07:51:04.203Z">
+<meta property="article:modified_time" content="2020-12-05T10:48:26.440Z">
+<meta property="article:author" content="dawncoody">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142815118.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Git" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/02/09/Git/" class="article-date">
+  <time class="dt-published" datetime="2023-02-09T07:51:04.203Z" itemprop="datePublished">2023-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>[toc]</p>
+<h1 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h1><blockquote>
+<p>优势</p>
+</blockquote>
+<ul>
+<li>大部分操作在本地完成</li>
+<li>完整性保证</li>
+<li>尽可能添加数据而不是删除或修改数据</li>
+<li>分支操作非常快捷流畅</li>
+<li>与 Linux 命令全面兼容</li>
+</ul>
+<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p>
+<p>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
+<p>Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。</p>
+<h1 id="2-Git的安装"><a href="#2-Git的安装" class="headerlink" title="2. Git的安装"></a>2. Git的安装</h1><p>Git 各平台安装包下载地址为：<a href="http://git-scm.com![image-20201019142729630](C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142729630.png)">http://git-scm.com![image-20201019142729630](C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142729630.png)</a></p>
+<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142815118.png" alt="image-20201019142815118"></p>
+<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142851974.png" alt="image-20201019142851974"></p>
+<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142910638.png" alt="image-20201019142910638"></p>
+<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143008030.png" alt="image-20201019143008030"></p>
+<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143032595.png" alt="image-20201019143032595"></p>
+<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143054669.png" alt="image-20201019143054669"></p>
+<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143108158.png" alt="image-20201019143108158"></p>
+<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143119699.png" alt="image-20201019143119699"></p>
+<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143138813.png" alt="image-20201019143138813"></p>
+<h1 id="3-Git-配置"><a href="#3-Git-配置" class="headerlink" title="3. Git 配置"></a>3. Git 配置</h1><p>配置个人的用户名称和电子邮件地址（这里的设置的签名和登录的远程仓库的账号、密码没有任何关系，只是为了区分是谁写的）：</p>
+<ul>
+<li>项目级别 &#x2F; 仓库级别：仅在当前本地仓库范围有效（保存位置：.&#x2F;git&#x2F;config 文件）<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config user.name <span class="string">&quot;rqq&quot;</span> 	<span class="comment"># 用户名</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config user.email <span class="built_in">test</span>@qq.com	<span class="comment"># 邮箱</span></span></span><br></pre></td></tr></table></figure></li>
+<li>系统用户级别：登录当前操作系统的用户范围（保存位置在：~&#x2F;.gitconfig文件）<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --global user.name <span class="string">&quot;rqq&quot;</span> 	<span class="comment"># 用户名</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --global user.email <span class="built_in">test</span>@qq.com	<span class="comment"># 邮箱</span></span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>查看配置信息</strong></p>
+<p>要检查已有的配置信息，可以使用 git config –list 命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --global --list <span class="comment"># 查看系统用户级别的配置</span></span></span><br><span class="line">...</span><br><span class="line">user.name=rqq</span><br><span class="line">user.email=test@qq.com</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --list		<span class="comment"># 项目级别</span></span></span><br><span class="line">...</span><br><span class="line">user.name=rqq</span><br><span class="line">user.email=test@qq.com</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="4-Git-基本操作"><a href="#4-Git-基本操作" class="headerlink" title="4. Git 基本操作"></a>4. Git 基本操作</h1><p>Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比。</p>
+<p>Git 常用的是以下 6 个命令：<strong>git clone</strong>、<strong>git push</strong>、<strong>git add</strong> 、<strong>git commit</strong>、<strong>git checkout</strong>、<strong>git pull</strong>，后面我们会详细介绍。</p>
+<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019153835539.png" alt="image-20201019153835539"></p>
+<p><strong>说明：</strong></p>
+<ul>
+<li>workspace：工作区</li>
+<li>staging area：暂存区&#x2F;缓存区</li>
+<li>local repository：或本地仓库</li>
+<li>remote repository：远程仓库</li>
+</ul>
+<h2 id="4-1创建本地仓库和提交"><a href="#4-1创建本地仓库和提交" class="headerlink" title="4.1创建本地仓库和提交"></a>4.1创建本地仓库和提交</h2><p>一个简单的操作步骤：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git init  <span class="comment"># 本地库初始化</span></span><br><span class="line">$ git add [file name]  <span class="comment">#指定文件</span></span><br><span class="line">$ git add . <span class="comment">#所有</span></span><br><span class="line">$ git commit -m <span class="string">&quot;commit message&quot;</span> [file name] <span class="comment"># 提交暂存区内容到仓库</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>git init - 初始化仓库。</li>
+<li>git add . - 添加文件到暂存区。</li>
+<li>git add [file name] -指定文件添加到暂存区</li>
+<li>git commit - 将暂存区内容添加到仓库中</li>
+</ul>
+<p>查看状态工作区、暂存区状态</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git status</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-2查看-commit-历史记录"><a href="#4-2查看-commit-历史记录" class="headerlink" title="4.2查看 commit 历史记录"></a>4.2查看 commit 历史记录</h2><p><code>git log</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit e851d3991f39a5d11e173c3d4ca2f82dc838d08b (HEAD -&gt; master)</span><br><span class="line">Author: dawncoody &lt;dawntruecool@gmail.com&gt;</span><br><span class="line">Date:   Mon Oct 19 18:29:55 2020 +0800</span><br><span class="line"></span><br><span class="line">    三次啦</span><br><span class="line"></span><br><span class="line">commit 5f37a69eafcf6fa593bc1009eed167e81ce8fd75</span><br><span class="line">Author: dawncoody &lt;dawntruecool@gmail.com&gt;</span><br><span class="line">Date:   Mon Oct 19 18:25:12 2020 +0800</span><br><span class="line"></span><br><span class="line">    第二次提交</span><br><span class="line"></span><br><span class="line">commit ed22de35469f0199298d3e1189f6004bb597b796</span><br><span class="line">Author: dawncoody &lt;dawntruecool@gmail.com&gt;</span><br><span class="line">Date:   Mon Oct 19 18:22:12 2020 +0800</span><br><span class="line"></span><br><span class="line">    第一次提交</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>因为用 git log 显示的东西太多，所以很容易经常需要多屏显示</p>
+<p>多屏显示的控制方式：</p>
+<p><strong>空格向下翻页 b向上翻页 q退出</strong></p>
+<p>可以对 log 简洁显示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --pretty=oneline</span><br><span class="line">e851d3991f39a5d11e173c3d4ca2f82dc838d08b (HEAD -&gt; master) 三次啦</span><br><span class="line">5f37a69eafcf6fa593bc1009eed167e81ce8fd75 第二次提交</span><br><span class="line">ed22de35469f0199298d3e1189f6004bb597b796 第一次提交</span><br></pre></td></tr></table></figure>
+
+<p>更简洁的方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">e851d39 (HEAD -&gt; master) 三次啦</span><br><span class="line">5f37a69 第二次提交</span><br><span class="line">ed22de3 第一次提交</span><br></pre></td></tr></table></figure>
+
+<p>看到移动到当前版本所需要的步数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># HEAD@&#123;移动到当前版本所需要的步数&#125;  </span></span><br><span class="line">$ git reflog</span><br><span class="line">e851d39 (HEAD -&gt; master) HEAD@&#123;0&#125;: commit: 三次啦</span><br><span class="line">5f37a69 HEAD@&#123;1&#125;: commit: 第二次提交</span><br><span class="line">ed22de3 HEAD@&#123;2&#125;: commit: 第一次提交</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-3-前进和后退"><a href="#4-3-前进和后退" class="headerlink" title="4.3 前进和后退"></a>4.3 前进和后退</h2><ul>
+<li><p>基于索引值<code>推荐</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard 指针位置</span><br><span class="line"><span class="comment"># 例子：git reset --hard e851d39 #回到这个状态(hash值)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 <strong>^</strong> 符号<code>只能后退</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br><span class="line"><span class="comment"># 例子：git reset --hard HEAD^^</span></span><br><span class="line"><span class="comment"># 注意：几个 ^ 表示后退几步</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 <strong>~</strong> 符号<code>只能后退</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD~n <span class="comment"># 一个 ^ 表示后退一步，n 个表示后退 n 步</span></span><br><span class="line"><span class="comment"># 例子：git reset --hard HEAD~3</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>reset 的三个参数比较</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">--soft 参数:</span><br><span class="line">	- 仅仅本地仓库移动 HEAD 指针</span><br><span class="line">--mixed 参数:</span><br><span class="line">	- 在本地仓库移动 HEAD 指针</span><br><span class="line">	- 重置暂存区</span><br><span class="line">--hard 参数</span><br><span class="line">	- 在本地仓库移动 HEAD 指针</span><br><span class="line">	- 重置暂存区</span><br><span class="line">	- 重置工作区</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-4-删除文件并找回"><a href="#4-4-删除文件并找回" class="headerlink" title="4.4 删除文件并找回"></a>4.4 删除文件并找回</h2><ul>
+<li>前提：删除前，文件存存在时的状态提交到了本地库</li>
+<li>操作：<code>git reset --hard [指针位置]</code><ul>
+<li>删除操作已近提交到本地库：指针指向历史记录</li>
+<li>删除操作尚未提交到本地库：指针使用 HEAD</li>
+</ul>
+</li>
+</ul>
+<p>撤销错误添加到暂存区里的文件，可以输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> --cache 文件名</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-5-比较文件差异"><a href="#4-5-比较文件差异" class="headerlink" title="4.5 比较文件差异"></a>4.5 比较文件差异</h2><ul>
+<li><p>将工作区走中的文件和暂存区进行比较</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff [文件名]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将工作区中的文件和本地库历史记录比较</p>
+</li>
+</ul>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff [本地仓库历史版本] [文件名]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>不带文件名比较多个文件</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff [本地仓库历史版本]</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="4-6-分支管理"><a href="#4-6-分支管理" class="headerlink" title="4.6 分支管理"></a>4.6 分支管理</h2><blockquote>
+<p>什么是分支管理</p>
+</blockquote>
+<ul>
+<li>在版本控制过程中，使用多条线同时推动多个任务</li>
+</ul>
+<blockquote>
+<p>分支的好处</p>
+</blockquote>
+<ul>
+<li>同时推进多个功能的开始，提高开发效率</li>
+<li>各个分支在开发过程中如果某一个分支开发失败，不会对其他分支有任何影响</li>
+</ul>
+<blockquote>
+<p>分支操作</p>
+</blockquote>
+<ul>
+<li><p>创建分支</p>
+<p>&#x3D;&#x3D;<code>git branch</code>&#x3D;&#x3D;</p>
+</li>
+<li><p>查看分支</p>
+</li>
+</ul>
+<p>  &#x3D;&#x3D;<code>git branch -v</code>&#x3D;&#x3D;</p>
+<ul>
+<li><p>切换分支</p>
+<p>&#x3D;&#x3D;<code>git checkout [分支名]</code>&#x3D;&#x3D;</p>
+</li>
+<li><p>合并分支</p>
+<ul>
+<li><p>第一步：切换到接受修改的分支（被合并，增加新内容）上</p>
+<p><code>git checkout[被合并的分支名]</code></p>
+</li>
+<li><p>第二步：执行 <strong>merge</strong></p>
+<p>&#x3D;&#x3D;<code>git merge [有新内容的分支名]</code>&#x3D;&#x3D;</p>
+</li>
+<li><p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b 分支名 <span class="comment"># 创建分支并直接切换到该分支</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>删除分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d 分支名</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>解决冲突(当两个人对都对这个文件有修改的时候，就需要手动解决了)</p>
+</li>
+<li><p>第一步：编辑文件，删除特殊符号</p>
+</li>
+<li><p>第二步：把文件修改到满意程度，保存退出</p>
+</li>
+<li><p>第三步：git add [文件名]</p>
+</li>
+<li><p>第四步：git commit -m “日志信息”(&#x3D;&#x3D;<strong>注意：此时commit一定不能带文件名</strong>&#x3D;&#x3D;)</p>
+</li>
+</ul>
+<h1 id="5-将本地仓库推送到远程仓库-Github"><a href="#5-将本地仓库推送到远程仓库-Github" class="headerlink" title="5 将本地仓库推送到远程仓库(Github)"></a>5 将本地仓库推送到远程仓库(Github)</h1><blockquote>
+<p>创建远程库地址别名</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v <span class="comment"># 查看远程地址别名</span></span><br><span class="line">$ git remote add 别名(一般用origin) 远程地址</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>删除指定的远程仓库</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote <span class="built_in">rm</span> origin</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>修改远程仓库地址</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin &lt;remote-url&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>推送</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git push 别名 分支名</span><br><span class="line">$ git push -u 别名 分支名	<span class="comment"># -u指定默认主机</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>克隆</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [远程地址]</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>完整的把远程库下载到本地</li>
+<li>创建 origin 远程地址别名</li>
+<li>初始化本地库</li>
+</ul>
+<blockquote>
+<p>拉取</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git pull[远程仓库地址] [远程分支名]</span><br><span class="line">$ git fetch[远程仓库地址别名] [远程分支名]</span><br><span class="line">$ git merge[远程库地址别名/远程分支名]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>pull &#x3D; fetch + merge</li>
+</ul>
+<blockquote>
+<p>解决冲突</p>
+</blockquote>
+<p>经常团队开发的时候都会对远程仓库进行修改，如果两个都对该仓库有修改，会发生冲突，需要解决冲突。</p>
+<ul>
+<li>如果不是基于 GitHub 远程库的最新版本，不能推送，必须先拉取。</li>
+<li>拉取下来后如果进入冲突状态，则按照“分支冲突解决”操作解决即可。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/09/Git/" data-id="cldwsyr7o00001svx16gm8ei3" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/02/09/word%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/02/09/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">test</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/02/09/word%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/09/Git/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/09/test/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 dawncoody<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
