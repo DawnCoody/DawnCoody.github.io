@@ -1,704 +1,1080 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="dawncoody">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+    <meta charset="utf-8">
+    <meta name="keywords" content="dawncoody">
+    <meta name="description" content="寂寞的人总是记住生命中出现的每一个人，正如我总是意犹未尽地想起你！">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>dawncoody</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+    <!-- index cover -->
+    <!-- <link rel="stylesheet preload" type="text/css" href="/css/indexcover.css"> -->
+    <style>
+        .carousel-control {
+            width: 45px;
+            height: 45px;
+            line-height: 55px;
+            border-radius: 45px;
+            background: transparent;
+            cursor: pointer;
+            z-index: 100;
+        }
+        
+        #prev-cover {
+            position: absolute;
+            top: 48%;
+            left: 8px;
+        }
+        
+        #next-cover {
+            position: absolute;
+            top: 48%;
+            right: 8px;;
+        }
+        
+        #prev-cover i {
+            margin-right: 3px;
+        }
+        
+        #next-cover i {
+            margin-left: 3px;
+        }
+        
+        .carousel-control:hover {
+            background-color: rgba(0, 0, 0, .4);
+        }
+        
+        .carousel-control i {
+            color: #fff;
+            font-size: 2.4rem;
+        }
+    </style>
 
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">dawncoody</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
       
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">dawncoody</div>
+        <div class="logo-desc">
+            
+            寂寞的人总是记住生命中出现的每一个人，正如我总是意犹未尽地想起你！
+            
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+
+    <ul class="menu-list mobile-menu-list">
         
-          <a class="main-nav-link" href="/">Home</a>
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
         
-      </nav>
-      <nav id="sub-nav">
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
 </header>
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-word常用快捷键" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/02/09/word%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="article-date">
-  <time class="dt-published" datetime="2023-02-09T07:52:23.354Z" itemprop="datePublished">2023-02-09</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="对段落进行对齐和格式设置"><a href="#对段落进行对齐和格式设置" class="headerlink" title="对段落进行对齐和格式设置"></a>对段落进行对齐和格式设置</h3><table>
-<thead>
-<tr>
-<th align="left">若要</th>
-<th align="left">按</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">将段落居中。</td>
-<td align="left">Ctrl+E</td>
-</tr>
-<tr>
-<td align="left">使段落两端对齐。</td>
-<td align="left">Ctrl+J</td>
-</tr>
-<tr>
-<td align="left">将段落左对齐。</td>
-<td align="left">Ctrl+L</td>
-</tr>
-<tr>
-<td align="left">将段落右对齐。</td>
-<td align="left">Ctrl+R</td>
-</tr>
-<tr>
-<td align="left">缩进段落。</td>
-<td align="left">Ctrl+M</td>
-</tr>
-<tr>
-<td align="left">删除段落缩进。</td>
-<td align="left">Ctrl+Shift+M</td>
-</tr>
-<tr>
-<td align="left">创建悬挂缩进。</td>
-<td align="left">Ctrl+T</td>
-</tr>
-<tr>
-<td align="left">删除悬挂缩进。</td>
-<td align="left">Ctrl+Shift+T</td>
-</tr>
-<tr>
-<td align="left">删除段落格式。</td>
-<td align="left">Ctrl+Q</td>
-</tr>
-<tr>
-<td align="left">对段落应用单倍行距。</td>
-<td align="left">Ctrl+1</td>
-</tr>
-<tr>
-<td align="left">对段落应用双倍行距。</td>
-<td align="left">Ctrl+2</td>
-</tr>
-<tr>
-<td align="left">对段落应用 1.5 行距。</td>
-<td align="left">Ctrl+5</td>
-</tr>
-<tr>
-<td align="left">在段落之前添加或删除空格。</td>
-<td align="left">Ctrl+0（零）</td>
-</tr>
-<tr>
-<td align="left">启用自动格式。</td>
-<td align="left">Ctrl+Alt+K</td>
-</tr>
-<tr>
-<td align="left">应用” <strong>普通”</strong> 样式。</td>
-<td align="left">Ctrl+Shift+N</td>
-</tr>
-<tr>
-<td align="left">应用” <strong>标题 1”</strong> 样式。</td>
-<td align="left">Ctrl+Alt+1</td>
-</tr>
-<tr>
-<td align="left">应用” <strong>标题 2”</strong> 样式。</td>
-<td align="left">Ctrl+Alt+2</td>
-</tr>
-<tr>
-<td align="left">应用” <strong>标题 3”</strong> 样式。</td>
-<td align="left">Ctrl+Alt+3</td>
-</tr>
-<tr>
-<td align="left">显示” <strong>应用样式”</strong> 任务窗格。</td>
-<td align="left">Ctrl+Shift+S</td>
-</tr>
-<tr>
-<td align="left">显示” <strong>样式”</strong> 任务窗格。</td>
-<td align="left">Ctrl+Alt+Shift+S</td>
-</tr>
-</tbody></table>
-<h3 id="设置字符格式"><a href="#设置字符格式" class="headerlink" title="设置字符格式"></a>设置字符格式</h3><table>
-<thead>
-<tr>
-<th align="left">若要</th>
-<th align="left">按</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">显示<strong>“字体”</strong>对话框。</td>
-<td align="left">Ctrl+D Ctrl+Shift+F</td>
-</tr>
-<tr>
-<td align="left">增大字号。</td>
-<td align="left">Ctrl+Shift+右尖括号 (&gt;)</td>
-</tr>
-<tr>
-<td align="left">减小字号。</td>
-<td align="left">Ctrl+Shift+左尖括号 (&lt;)</td>
-</tr>
-<tr>
-<td align="left">逐磅增大字号。</td>
-<td align="left">Ctrl+右方括号 (])</td>
-</tr>
-<tr>
-<td align="left">逐磅减小字号。</td>
-<td align="left">Ctrl+左中括号 ([)</td>
-</tr>
-<tr>
-<td align="left">在大写、小写和标题大小写之间切换文本。</td>
-<td align="left">Shift+F3</td>
-</tr>
-<tr>
-<td align="left">将文本更改为全部大写。</td>
-<td align="left">Ctrl+Shift+A</td>
-</tr>
-<tr>
-<td align="left">隐藏所选文本。</td>
-<td align="left">Ctrl+Shift+H</td>
-</tr>
-<tr>
-<td align="left">应用加粗格式。</td>
-<td align="left">Ctrl+B</td>
-</tr>
-<tr>
-<td align="left">应用下划线格式。</td>
-<td align="left">Ctrl+U</td>
-</tr>
-<tr>
-<td align="left">对单词应用下划线格式，但不应用空格。</td>
-<td align="left">Ctrl+Shift+W</td>
-</tr>
-<tr>
-<td align="left">应用双下划线格式。</td>
-<td align="left">Ctrl+Shift+D</td>
-</tr>
-<tr>
-<td align="left">应用倾斜格式。</td>
-<td align="left">Ctrl+I</td>
-</tr>
-<tr>
-<td align="left">应用小型大写格式。</td>
-<td align="left">Ctrl+Shift+K</td>
-</tr>
-<tr>
-<td align="left">应用下标格式。</td>
-<td align="left">Ctrl+等号 ( &#x3D; )</td>
-</tr>
-<tr>
-<td align="left">应用上标格式。</td>
-<td align="left">Ctrl+Shift+加号 (+)</td>
-</tr>
-<tr>
-<td align="left">删除手动设置的字符格式。</td>
-<td align="left">Ctrl+Spacebar</td>
-</tr>
-<tr>
-<td align="left">将所选文本更改为”符号”字体。</td>
-<td align="left">Ctrl+Shift+Q</td>
-</tr>
-</tbody></table>
-<h3 id="创建文档大纲"><a href="#创建文档大纲" class="headerlink" title="创建文档大纲"></a>创建文档大纲</h3><p>这些快捷方式仅在文档位于”大纲”视图中 <strong>时</strong> 适用。</p>
-<table>
-<thead>
-<tr>
-<th align="left">执行的操作</th>
-<th align="left">按</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">提升段落级别。</td>
-<td align="left">Alt+Shift+向左键</td>
-</tr>
-<tr>
-<td align="left">降低段落级别。</td>
-<td align="left">Alt+Shift+向右键</td>
-</tr>
-<tr>
-<td align="left">将段落降级为正文文本。</td>
-<td align="left">Ctrl+Shift+N</td>
-</tr>
-<tr>
-<td align="left">上移所选段落。</td>
-<td align="left">Alt+Shift+向上箭头键</td>
-</tr>
-<tr>
-<td align="left">下移所选段落。</td>
-<td align="left">Alt+Shift+向下键</td>
-</tr>
-<tr>
-<td align="left">展开标题下的文本。</td>
-<td align="left">Alt+Shift+加号 (+)</td>
-</tr>
-<tr>
-<td align="left">折叠标题下的文本。</td>
-<td align="left">Alt+Shift+减号 (-)</td>
-</tr>
-<tr>
-<td align="left">扩展或折叠所有文本或标题。</td>
-<td align="left">Alt+Shift+A</td>
-</tr>
-<tr>
-<td align="left">隐藏或显示字符格式。</td>
-<td align="left">数字键盘 (上的正斜) (&#x2F;)</td>
-</tr>
-<tr>
-<td align="left">在显示第一行正文文本和显示所有正文文本之间切换。</td>
-<td align="left">Alt+Shift+L</td>
-</tr>
-<tr>
-<td align="left">显示具有”标题 <strong>1”样式的所有</strong> 标题。</td>
-<td align="left">Alt+Shift+1</td>
-</tr>
-<tr>
-<td align="left">显示具有指定标题级别的所有标题。</td>
-<td align="left">Alt+Shift+标题级别编号</td>
-</tr>
-<tr>
-<td align="left">插入制表符。</td>
-<td align="left">Ctrl+Tab</td>
-</tr>
-</tbody></table>
 
-      
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+    
+
+    <div class="carousel-item  white-text bg-cover about-cover">
+        <div class="container">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                寒招君
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/09/word%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" data-id="cldwu0r6v0001iovx428s5vjy" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
 
 
 
-  
-    <article id="post-Git" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/02/09/Git/" class="article-date">
-  <time class="dt-published" datetime="2023-02-09T07:51:04.203Z" itemprop="datePublished">2023-02-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>[toc]</p>
-<h1 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h1><blockquote>
-<p>优势</p>
-</blockquote>
-<ul>
-<li>大部分操作在本地完成</li>
-<li>完整性保证</li>
-<li>尽可能添加数据而不是删除或修改数据</li>
-<li>分支操作非常快捷流畅</li>
-<li>与 Linux 命令全面兼容</li>
-</ul>
-<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p>
-<p>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
-<p>Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。</p>
-<h1 id="2-Git的安装"><a href="#2-Git的安装" class="headerlink" title="2. Git的安装"></a>2. Git的安装</h1><p>Git 各平台安装包下载地址为：<a href="http://git-scm.com![image-20201019142729630](C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142729630.png)">http://git-scm.com![image-20201019142729630](C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142729630.png)</a></p>
-<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142815118.png" alt="image-20201019142815118"></p>
-<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142851974.png" alt="image-20201019142851974"></p>
-<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019142910638.png" alt="image-20201019142910638"></p>
-<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143008030.png" alt="image-20201019143008030"></p>
-<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143032595.png" alt="image-20201019143032595"></p>
-<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143054669.png" alt="image-20201019143054669"></p>
-<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143108158.png" alt="image-20201019143108158"></p>
-<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143119699.png" alt="image-20201019143119699"></p>
-<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143138813.png" alt="image-20201019143138813"></p>
-<h1 id="3-Git-配置"><a href="#3-Git-配置" class="headerlink" title="3. Git 配置"></a>3. Git 配置</h1><p>配置个人的用户名称和电子邮件地址（这里的设置的签名和登录的远程仓库的账号、密码没有任何关系，只是为了区分是谁写的）：</p>
-<ul>
-<li>项目级别 &#x2F; 仓库级别：仅在当前本地仓库范围有效（保存位置：.&#x2F;git&#x2F;config 文件）<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config user.name <span class="string">&quot;rqq&quot;</span> 	<span class="comment"># 用户名</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config user.email <span class="built_in">test</span>@qq.com	<span class="comment"># 邮箱</span></span></span><br></pre></td></tr></table></figure></li>
-<li>系统用户级别：登录当前操作系统的用户范围（保存位置在：~&#x2F;.gitconfig文件）<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --global user.name <span class="string">&quot;rqq&quot;</span> 	<span class="comment"># 用户名</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --global user.email <span class="built_in">test</span>@qq.com	<span class="comment"># 邮箱</span></span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<p><strong>查看配置信息</strong></p>
-<p>要检查已有的配置信息，可以使用 git config –list 命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --global --list <span class="comment"># 查看系统用户级别的配置</span></span></span><br><span class="line">...</span><br><span class="line">user.name=rqq</span><br><span class="line">user.email=test@qq.com</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --list		<span class="comment"># 项目级别</span></span></span><br><span class="line">...</span><br><span class="line">user.name=rqq</span><br><span class="line">user.email=test@qq.com</span><br></pre></td></tr></table></figure>
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i>开始阅读
+                </a>
+
+                
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa-github-alt"></i>Github
+                    </a>
+                
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
 
 
 
-<h1 id="4-Git-基本操作"><a href="#4-Git-基本操作" class="headerlink" title="4. Git 基本操作"></a>4. Git 基本操作</h1><p>Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比。</p>
-<p>Git 常用的是以下 6 个命令：<strong>git clone</strong>、<strong>git push</strong>、<strong>git add</strong> 、<strong>git commit</strong>、<strong>git checkout</strong>、<strong>git pull</strong>，后面我们会详细介绍。</p>
-<p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019153835539.png" alt="image-20201019153835539"></p>
-<p><strong>说明：</strong></p>
-<ul>
-<li>workspace：工作区</li>
-<li>staging area：暂存区&#x2F;缓存区</li>
-<li>local repository：或本地仓库</li>
-<li>remote repository：远程仓库</li>
-</ul>
-<h2 id="4-1创建本地仓库和提交"><a href="#4-1创建本地仓库和提交" class="headerlink" title="4.1创建本地仓库和提交"></a>4.1创建本地仓库和提交</h2><p>一个简单的操作步骤：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git init  <span class="comment"># 本地库初始化</span></span><br><span class="line">$ git add [file name]  <span class="comment">#指定文件</span></span><br><span class="line">$ git add . <span class="comment">#所有</span></span><br><span class="line">$ git commit -m <span class="string">&quot;commit message&quot;</span> [file name] <span class="comment"># 提交暂存区内容到仓库</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>git init - 初始化仓库。</li>
-<li>git add . - 添加文件到暂存区。</li>
-<li>git add [file name] -指定文件添加到暂存区</li>
-<li>git commit - 将暂存区内容添加到仓库中</li>
-</ul>
-<p>查看状态工作区、暂存区状态</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git status</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="4-2查看-commit-历史记录"><a href="#4-2查看-commit-历史记录" class="headerlink" title="4.2查看 commit 历史记录"></a>4.2查看 commit 历史记录</h2><p><code>git log</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit e851d3991f39a5d11e173c3d4ca2f82dc838d08b (HEAD -&gt; master)</span><br><span class="line">Author: dawncoody &lt;dawntruecool@gmail.com&gt;</span><br><span class="line">Date:   Mon Oct 19 18:29:55 2020 +0800</span><br><span class="line"></span><br><span class="line">    三次啦</span><br><span class="line"></span><br><span class="line">commit 5f37a69eafcf6fa593bc1009eed167e81ce8fd75</span><br><span class="line">Author: dawncoody &lt;dawntruecool@gmail.com&gt;</span><br><span class="line">Date:   Mon Oct 19 18:25:12 2020 +0800</span><br><span class="line"></span><br><span class="line">    第二次提交</span><br><span class="line"></span><br><span class="line">commit ed22de35469f0199298d3e1189f6004bb597b796</span><br><span class="line">Author: dawncoody &lt;dawntruecool@gmail.com&gt;</span><br><span class="line">Date:   Mon Oct 19 18:22:12 2020 +0800</span><br><span class="line"></span><br><span class="line">    第一次提交</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>因为用 git log 显示的东西太多，所以很容易经常需要多屏显示</p>
-<p>多屏显示的控制方式：</p>
-<p><strong>空格向下翻页 b向上翻页 q退出</strong></p>
-<p>可以对 log 简洁显示</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --pretty=oneline</span><br><span class="line">e851d3991f39a5d11e173c3d4ca2f82dc838d08b (HEAD -&gt; master) 三次啦</span><br><span class="line">5f37a69eafcf6fa593bc1009eed167e81ce8fd75 第二次提交</span><br><span class="line">ed22de35469f0199298d3e1189f6004bb597b796 第一次提交</span><br></pre></td></tr></table></figure>
-
-<p>更简洁的方式</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">e851d39 (HEAD -&gt; master) 三次啦</span><br><span class="line">5f37a69 第二次提交</span><br><span class="line">ed22de3 第一次提交</span><br></pre></td></tr></table></figure>
-
-<p>看到移动到当前版本所需要的步数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># HEAD@&#123;移动到当前版本所需要的步数&#125;  </span></span><br><span class="line">$ git reflog</span><br><span class="line">e851d39 (HEAD -&gt; master) HEAD@&#123;0&#125;: commit: 三次啦</span><br><span class="line">5f37a69 HEAD@&#123;1&#125;: commit: 第二次提交</span><br><span class="line">ed22de3 HEAD@&#123;2&#125;: commit: 第一次提交</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-3-前进和后退"><a href="#4-3-前进和后退" class="headerlink" title="4.3 前进和后退"></a>4.3 前进和后退</h2><ul>
-<li><p>基于索引值<code>推荐</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard 指针位置</span><br><span class="line"><span class="comment"># 例子：git reset --hard e851d39 #回到这个状态(hash值)</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用 <strong>^</strong> 符号<code>只能后退</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br><span class="line"><span class="comment"># 例子：git reset --hard HEAD^^</span></span><br><span class="line"><span class="comment"># 注意：几个 ^ 表示后退几步</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用 <strong>~</strong> 符号<code>只能后退</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD~n <span class="comment"># 一个 ^ 表示后退一步，n 个表示后退 n 步</span></span><br><span class="line"><span class="comment"># 例子：git reset --hard HEAD~3</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<blockquote>
-<p>reset 的三个参数比较</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">--soft 参数:</span><br><span class="line">	- 仅仅本地仓库移动 HEAD 指针</span><br><span class="line">--mixed 参数:</span><br><span class="line">	- 在本地仓库移动 HEAD 指针</span><br><span class="line">	- 重置暂存区</span><br><span class="line">--hard 参数</span><br><span class="line">	- 在本地仓库移动 HEAD 指针</span><br><span class="line">	- 重置暂存区</span><br><span class="line">	- 重置工作区</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-4-删除文件并找回"><a href="#4-4-删除文件并找回" class="headerlink" title="4.4 删除文件并找回"></a>4.4 删除文件并找回</h2><ul>
-<li>前提：删除前，文件存存在时的状态提交到了本地库</li>
-<li>操作：<code>git reset --hard [指针位置]</code><ul>
-<li>删除操作已近提交到本地库：指针指向历史记录</li>
-<li>删除操作尚未提交到本地库：指针使用 HEAD</li>
-</ul>
-</li>
-</ul>
-<p>撤销错误添加到暂存区里的文件，可以输入以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> --cache 文件名</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-5-比较文件差异"><a href="#4-5-比较文件差异" class="headerlink" title="4.5 比较文件差异"></a>4.5 比较文件差异</h2><ul>
-<li><p>将工作区走中的文件和暂存区进行比较</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff [文件名]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将工作区中的文件和本地库历史记录比较</p>
-</li>
-</ul>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff [本地仓库历史版本] [文件名]</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>不带文件名比较多个文件</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff [本地仓库历史版本]</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="4-6-分支管理"><a href="#4-6-分支管理" class="headerlink" title="4.6 分支管理"></a>4.6 分支管理</h2><blockquote>
-<p>什么是分支管理</p>
-</blockquote>
-<ul>
-<li>在版本控制过程中，使用多条线同时推动多个任务</li>
-</ul>
-<blockquote>
-<p>分支的好处</p>
-</blockquote>
-<ul>
-<li>同时推进多个功能的开始，提高开发效率</li>
-<li>各个分支在开发过程中如果某一个分支开发失败，不会对其他分支有任何影响</li>
-</ul>
-<blockquote>
-<p>分支操作</p>
-</blockquote>
-<ul>
-<li><p>创建分支</p>
-<p>&#x3D;&#x3D;<code>git branch</code>&#x3D;&#x3D;</p>
-</li>
-<li><p>查看分支</p>
-</li>
-</ul>
-<p>  &#x3D;&#x3D;<code>git branch -v</code>&#x3D;&#x3D;</p>
-<ul>
-<li><p>切换分支</p>
-<p>&#x3D;&#x3D;<code>git checkout [分支名]</code>&#x3D;&#x3D;</p>
-</li>
-<li><p>合并分支</p>
-<ul>
-<li><p>第一步：切换到接受修改的分支（被合并，增加新内容）上</p>
-<p><code>git checkout[被合并的分支名]</code></p>
-</li>
-<li><p>第二步：执行 <strong>merge</strong></p>
-<p>&#x3D;&#x3D;<code>git merge [有新内容的分支名]</code>&#x3D;&#x3D;</p>
-</li>
-<li><p>或者</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b 分支名 <span class="comment"># 创建分支并直接切换到该分支</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>删除分支</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d 分支名</span><br></pre></td></tr></table></figure>
-
-
-</li>
-<li><p>解决冲突(当两个人对都对这个文件有修改的时候，就需要手动解决了)</p>
-</li>
-<li><p>第一步：编辑文件，删除特殊符号</p>
-</li>
-<li><p>第二步：把文件修改到满意程度，保存退出</p>
-</li>
-<li><p>第三步：git add [文件名]</p>
-</li>
-<li><p>第四步：git commit -m “日志信息”(&#x3D;&#x3D;<strong>注意：此时commit一定不能带文件名</strong>&#x3D;&#x3D;)</p>
-</li>
-</ul>
-<h1 id="5-将本地仓库推送到远程仓库-Github"><a href="#5-将本地仓库推送到远程仓库-Github" class="headerlink" title="5 将本地仓库推送到远程仓库(Github)"></a>5 将本地仓库推送到远程仓库(Github)</h1><blockquote>
-<p>创建远程库地址别名</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v <span class="comment"># 查看远程地址别名</span></span><br><span class="line">$ git remote add 别名(一般用origin) 远程地址</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>删除指定的远程仓库</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote <span class="built_in">rm</span> origin</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>修改远程仓库地址</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin &lt;remote-url&gt;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>推送</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git push 别名 分支名</span><br><span class="line">$ git push -u 别名 分支名	<span class="comment"># -u指定默认主机</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>克隆</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [远程地址]</span><br></pre></td></tr></table></figure>
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
 
 
 
-<ul>
-<li>完整的把远程库下载到本地</li>
-<li>创建 origin 远程地址别名</li>
-<li>初始化本地库</li>
-</ul>
-<blockquote>
-<p>拉取</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git pull[远程仓库地址] [远程分支名]</span><br><span class="line">$ git fetch[远程仓库地址别名] [远程分支名]</span><br><span class="line">$ git merge[远程库地址别名/远程分支名]</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>pull &#x3D; fetch + merge</li>
-</ul>
-<blockquote>
-<p>解决冲突</p>
-</blockquote>
-<p>经常团队开发的时候都会对远程仓库进行修改，如果两个都对该仓库有修改，会发生冲突，需要解决冲突。</p>
-<ul>
-<li>如果不是基于 GitHub 远程库的最新版本，不能推送，必须先拉取。</li>
-<li>拉取下来后如果进入冲突状态，则按照“分支冲突解决”操作解决即可。</li>
-</ul>
 
-      
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/09/Git/" data-id="cldwu0r6q0000iovx941vh968" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
+    
+</div>
 
+<script>
+    $(function () {
+        let coverSlider = $('.carousel');
 
-  
-    <article id="post-test" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/02/09/test/" class="article-date">
-  <time class="dt-published" datetime="2023-02-09T07:42:22.000Z" itemprop="datePublished">2023-02-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
         
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/02/09/test/">test</a>
-    </h1>
-  
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
 
-      </header>
+        function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
+
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
+    });
+</script>
+
+
+
+<main class="content">
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener" href="http://www.dawncoody.com/">www.dawncoody.com</a></p>
-
-      
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/09/test/" data-id="cldwu0r6y0002iovx1rdq6qfm" data-title="test" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
     
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li></ul>
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+        </div>
     </div>
-  </div>
+</div>
+
+                    
+
+                    
+
+                    
+
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
 
 
-  
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/02/09/word%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2023/02/09/Git/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2023/02/09/test/">test</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
-  
-</aside>
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/02/09/word%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                对段落进行对齐和格式设置
+
+
+若要
+按
+
+
+
+将段落居中。
+Ctrl+E
+
+
+使段落两端对齐。
+Ctrl+J
+
+
+将段落左对齐。
+Ctrl+L
+
+
+将段落右对齐。
+Ctrl+R
+
+
+缩进段落。
+Ctrl+M
+
+
+删除段落缩进。
+Ctrl+S
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                dawncoody
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/02/09/Git/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                [toc]
+1. 介绍
+优势
+
+
+大部分操作在本地完成
+完整性保证
+尽可能添加数据而不是删除或修改数据
+分支操作非常快捷流畅
+与 Linux 命令全面兼容
+
+Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
+G
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                dawncoody
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/02/09/test/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="test">
+                            
+                            <span class="card-title">test</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                第一章内容第二章内容
+
+参考文献www.dawncoody.com
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                dawncoody
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+        </div>
+    </article>
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
         
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2023 dawncoody<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
     </div>
-  </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <a href="/about" target="_blank">dawncoody</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
 </footer>
 
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
     
 
+    
+    
+    
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+    <!-- 雪花特效 -->
+    
 
+    <!-- 鼠标星星特效 -->
+    
 
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
 
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    <!-- Baidu Analytics -->
 
+    <!-- Baidu Push -->
 
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
 
-<script src="/js/script.js"></script>
+    
 
+    
 
+    <!--腾讯兔小巢-->
+    
+    
 
+    
 
+    
 
-  </div>
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
 </body>
+
 </html>
