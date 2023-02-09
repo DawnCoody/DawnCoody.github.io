@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="dawncoody">
+    <meta name="keywords" content="Git, dawncoody">
     <meta name="description" content="[toc]
 1. 介绍
 优势
@@ -29,7 +29,7 @@ G">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>dawncoody</title>
+    <title>Git | dawncoody</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -346,12 +346,12 @@ G">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Git</h1>
                 </div>
             </div>
         </div>
@@ -373,9 +373,13 @@ G">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -434,27 +438,25 @@ G">
 <p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019143138813.png" alt="image-20201019143138813"></p>
 <h1 id="3-Git-配置"><a href="#3-Git-配置" class="headerlink" title="3. Git 配置"></a>3. Git 配置</h1><p>配置个人的用户名称和电子邮件地址（这里的设置的签名和登录的远程仓库的账号、密码没有任何关系，只是为了区分是谁写的）：</p>
 <ul>
-<li>项目级别 &#x2F; 仓库级别：仅在当前本地仓库范围有效（保存位置：.&#x2F;git&#x2F;config 文件）<pre class=" language-shell"><code class="language-shell">$ git config user.name "rqq" 	# 用户名
-$ git config user.email test@qq.com	# 邮箱
-</code></pre>
-</li>
-<li>系统用户级别：登录当前操作系统的用户范围（保存位置在：~&#x2F;.gitconfig文件）</li>
+<li>项目级别 &#x2F; 仓库级别：仅在当前本地仓库范围有效（保存位置：.&#x2F;git&#x2F;config 文件）<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git config user.name &quot;rqq&quot; 	# 用户名
+$ git config user.email test@qq.com	# 邮箱<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>系统用户级别：登录当前操作系统的用户范围（保存位置在：~&#x2F;.gitconfig文件）<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git config --global user.name &quot;rqq&quot; 	# 用户名
+$ git config --global user.email test@qq.com	# 邮箱<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 </ul>
-<pre class=" language-shell"><code class="language-shell">$ git config --global user.name "rqq" 	# 用户名
-$ git config --global user.email test@qq.com	# 邮箱
-</code></pre>
 <p><strong>查看配置信息</strong></p>
 <p>要检查已有的配置信息，可以使用 git config –list 命令：</p>
-<pre class=" language-shell"><code class="language-shell">$ git config --global --list # 查看系统用户级别的配置
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git config --global --list # 查看系统用户级别的配置
 ...
-user.name=rqq
-user.email=test@qq.com
+user.name&#x3D;rqq
+user.email&#x3D;test@qq.com
 
 $ git config --list		# 项目级别
 ...
-user.name=rqq
-user.email=test@qq.com
-</code></pre>
+user.name&#x3D;rqq
+user.email&#x3D;test@qq.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 <h1 id="4-Git-基本操作"><a href="#4-Git-基本操作" class="headerlink" title="4. Git 基本操作"></a>4. Git 基本操作</h1><p>Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比。</p>
 <p>Git 常用的是以下 6 个命令：<strong>git clone</strong>、<strong>git push</strong>、<strong>git add</strong> 、<strong>git commit</strong>、<strong>git checkout</strong>、<strong>git pull</strong>，后面我们会详细介绍。</p>
 <p><img src="C:\Users\dawncoody\AppData\Roaming\Typora\typora-user-images\image-20201019153835539.png" alt="image-20201019153835539"></p>
@@ -466,11 +468,11 @@ user.email=test@qq.com
 <li>remote repository：远程仓库</li>
 </ul>
 <h2 id="4-1创建本地仓库和提交"><a href="#4-1创建本地仓库和提交" class="headerlink" title="4.1创建本地仓库和提交"></a>4.1创建本地仓库和提交</h2><p>一个简单的操作步骤：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> init  <span class="token comment" spellcheck="true"># 本地库初始化</span>
-$ <span class="token function">git</span> add <span class="token punctuation">[</span>file name<span class="token punctuation">]</span>  <span class="token comment" spellcheck="true">#指定文件</span>
-$ <span class="token function">git</span> add <span class="token keyword">.</span> <span class="token comment" spellcheck="true">#所有</span>
-$ <span class="token function">git</span> commit -m <span class="token string">"commit message"</span> <span class="token punctuation">[</span>file name<span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 提交暂存区内容到仓库</span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git init  # 本地库初始化
+$ git add [file name]  #指定文件
+$ git add . #所有
+$ git commit -m &quot;commit message&quot; [file name] # 提交暂存区内容到仓库<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <ul>
 <li>git init - 初始化仓库。</li>
 <li>git add . - 添加文件到暂存区。</li>
@@ -478,81 +480,78 @@ $ <span class="token function">git</span> commit -m <span class="token string">"
 <li>git commit - 将暂存区内容添加到仓库中</li>
 </ul>
 <p>查看状态工作区、暂存区状态</p>
-<pre class=" language-shell"><code class="language-shell">$ git status
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h2 id="4-2查看-commit-历史记录"><a href="#4-2查看-commit-历史记录" class="headerlink" title="4.2查看 commit 历史记录"></a>4.2查看 commit 历史记录</h2><p><code>git log</code></p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> log
-commit e851d3991f39a5d11e173c3d4ca2f82dc838d08b <span class="token punctuation">(</span>HEAD -<span class="token operator">></span> master<span class="token punctuation">)</span>
-Author: dawncoody <span class="token operator">&lt;</span>dawntruecool@gmail.com<span class="token operator">></span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git log
+commit e851d3991f39a5d11e173c3d4ca2f82dc838d08b (HEAD -&gt; master)
+Author: dawncoody &lt;dawntruecool@gmail.com&gt;
 Date:   Mon Oct 19 18:29:55 2020 +0800
 
     三次啦
 
 commit 5f37a69eafcf6fa593bc1009eed167e81ce8fd75
-Author: dawncoody <span class="token operator">&lt;</span>dawntruecool@gmail.com<span class="token operator">></span>
+Author: dawncoody &lt;dawntruecool@gmail.com&gt;
 Date:   Mon Oct 19 18:25:12 2020 +0800
 
     第二次提交
 
 commit ed22de35469f0199298d3e1189f6004bb597b796
-Author: dawncoody <span class="token operator">&lt;</span>dawntruecool@gmail.com<span class="token operator">></span>
+Author: dawncoody &lt;dawntruecool@gmail.com&gt;
 Date:   Mon Oct 19 18:22:12 2020 +0800
 
     第一次提交
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>因为用 git log 显示的东西太多，所以很容易经常需要多屏显示</p>
 <p>多屏显示的控制方式：</p>
 <p><strong>空格向下翻页 b向上翻页 q退出</strong></p>
 <p>可以对 log 简洁显示</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> log --pretty<span class="token operator">=</span>oneline
-e851d3991f39a5d11e173c3d4ca2f82dc838d08b <span class="token punctuation">(</span>HEAD -<span class="token operator">></span> master<span class="token punctuation">)</span> 三次啦
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git log --pretty&#x3D;oneline
+e851d3991f39a5d11e173c3d4ca2f82dc838d08b (HEAD -&gt; master) 三次啦
 5f37a69eafcf6fa593bc1009eed167e81ce8fd75 第二次提交
-ed22de35469f0199298d3e1189f6004bb597b796 第一次提交
-</code></pre>
+ed22de35469f0199298d3e1189f6004bb597b796 第一次提交<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>更简洁的方式</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> log --oneline
-e851d39 <span class="token punctuation">(</span>HEAD -<span class="token operator">></span> master<span class="token punctuation">)</span> 三次啦
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git log --oneline
+e851d39 (HEAD -&gt; master) 三次啦
 5f37a69 第二次提交
-ed22de3 第一次提交
-</code></pre>
+ed22de3 第一次提交<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>看到移动到当前版本所需要的步数</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># HEAD@&amp;#123;移动到当前版本所需要的步数&amp;#125;  </span>
-$ <span class="token function">git</span> reflog
-e851d39 <span class="token punctuation">(</span>HEAD -<span class="token operator">></span> master<span class="token punctuation">)</span> HEAD@<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;0&amp;#125;: commit: 三次啦</span>
-5f37a69 HEAD@<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;1&amp;#125;: commit: 第二次提交</span>
-ed22de3 HEAD@<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;2&amp;#125;: commit: 第一次提交</span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># HEAD@&#123;移动到当前版本所需要的步数&#125;  
+$ git reflog
+e851d39 (HEAD -&gt; master) HEAD@&#123;0&#125;: commit: 三次啦
+5f37a69 HEAD@&#123;1&#125;: commit: 第二次提交
+ed22de3 HEAD@&#123;2&#125;: commit: 第一次提交<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="4-3-前进和后退"><a href="#4-3-前进和后退" class="headerlink" title="4.3 前进和后退"></a>4.3 前进和后退</h2><ul>
 <li><p>基于索引值<code>推荐</code></p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> reset --hard 指针位置
-<span class="token comment" spellcheck="true"># 例子：git reset --hard e851d39 #回到这个状态(hash值)</span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git reset --hard 指针位置
+# 例子：git reset --hard e851d39 #回到这个状态(hash值)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 <li><p>使用 <strong>^</strong> 符号<code>只能后退</code></p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> reset --hard HEAD^
-<span class="token comment" spellcheck="true"># 例子：git reset --hard HEAD^^</span>
-<span class="token comment" spellcheck="true"># 注意：几个 ^ 表示后退几步</span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git reset --hard HEAD^
+# 例子：git reset --hard HEAD^^
+# 注意：几个 ^ 表示后退几步<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>使用 <strong>~</strong> 符号<code>只能后退</code></p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> reset --hard HEAD~n <span class="token comment" spellcheck="true"># 一个 ^ 表示后退一步，n 个表示后退 n 步</span>
-<span class="token comment" spellcheck="true"># 例子：git reset --hard HEAD~3</span>
-</code></pre>
-</li>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git reset --hard HEAD~n # 一个 ^ 表示后退一步，n 个表示后退 n 步
+# 例子：git reset --hard HEAD~3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 </ul>
 <blockquote>
 <p>reset 的三个参数比较</p>
 </blockquote>
-<pre><code>--soft 参数:
-    - 仅仅本地仓库移动 HEAD 指针
+<pre class="line-numbers language-none"><code class="language-none">--soft 参数:
+	- 仅仅本地仓库移动 HEAD 指针
 --mixed 参数:
-    - 在本地仓库移动 HEAD 指针
-    - 重置暂存区
+	- 在本地仓库移动 HEAD 指针
+	- 重置暂存区
 --hard 参数
-    - 在本地仓库移动 HEAD 指针
-    - 重置暂存区
-    - 重置工作区
-</code></pre>
+	- 在本地仓库移动 HEAD 指针
+	- 重置暂存区
+	- 重置工作区<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="4-4-删除文件并找回"><a href="#4-4-删除文件并找回" class="headerlink" title="4.4 删除文件并找回"></a>4.4 删除文件并找回</h2><ul>
 <li>前提：删除前，文件存存在时的状态提交到了本地库</li>
 <li>操作：<code>git reset --hard [指针位置]</code><ul>
@@ -562,23 +561,20 @@ ed22de3 HEAD@<span class="token operator">&amp;</span><span class="token comment
 </li>
 </ul>
 <p>撤销错误添加到暂存区里的文件，可以输入以下命令：</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">rm</span> --cache 文件名
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git rm --cache 文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h2 id="4-5-比较文件差异"><a href="#4-5-比较文件差异" class="headerlink" title="4.5 比较文件差异"></a>4.5 比较文件差异</h2><ul>
 <li><p>将工作区走中的文件和暂存区进行比较</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">diff</span> <span class="token punctuation">[</span>文件名<span class="token punctuation">]</span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git diff [文件名]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>将工作区中的文件和本地库历史记录比较</p>
 </li>
 </ul>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">diff</span> <span class="token punctuation">[</span>本地仓库历史版本<span class="token punctuation">]</span> <span class="token punctuation">[</span>文件名<span class="token punctuation">]</span>
-</code></pre>
+  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git diff [本地仓库历史版本] [文件名]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <ul>
 <li><p>不带文件名比较多个文件</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">diff</span> <span class="token punctuation">[</span>本地仓库历史版本<span class="token punctuation">]</span>
-</code></pre>
-</li>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git diff [本地仓库历史版本]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 <h2 id="4-6-分支管理"><a href="#4-6-分支管理" class="headerlink" title="4.6 分支管理"></a>4.6 分支管理</h2><blockquote>
 <p>什么是分支管理</p>
@@ -617,14 +613,13 @@ ed22de3 HEAD@<span class="token operator">&amp;</span><span class="token comment
 <p>&#x3D;&#x3D;<code>git merge [有新内容的分支名]</code>&#x3D;&#x3D;</p>
 </li>
 <li><p>或者</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> checkout -b 分支名 <span class="token comment" spellcheck="true"># 创建分支并直接切换到该分支</span>
-</code></pre>
-</li>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git checkout -b 分支名 # 创建分支并直接切换到该分支<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 </li>
 <li><p>删除分支</p>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> branch -d 分支名
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git branch -d 分支名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
 </li>
 <li><p>解决冲突(当两个人对都对这个文件有修改的时候，就需要手动解决了)</p>
 </li>
@@ -640,30 +635,31 @@ ed22de3 HEAD@<span class="token operator">&amp;</span><span class="token comment
 <h1 id="5-将本地仓库推送到远程仓库-Github"><a href="#5-将本地仓库推送到远程仓库-Github" class="headerlink" title="5 将本地仓库推送到远程仓库(Github)"></a>5 将本地仓库推送到远程仓库(Github)</h1><blockquote>
 <p>创建远程库地址别名</p>
 </blockquote>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> remote -v <span class="token comment" spellcheck="true"># 查看远程地址别名</span>
-$ <span class="token function">git</span> remote add 别名<span class="token punctuation">(</span>一般用origin<span class="token punctuation">)</span> 远程地址
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git remote -v # 查看远程地址别名
+$ git remote add 别名(一般用origin) 远程地址<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <blockquote>
 <p>删除指定的远程仓库</p>
 </blockquote>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> remote <span class="token function">rm</span> origin
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git remote rm origin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <blockquote>
 <p>修改远程仓库地址</p>
 </blockquote>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> remote set-url origin <span class="token operator">&lt;</span>remote-url<span class="token operator">></span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git remote set-url origin &lt;remote-url&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <blockquote>
 <p>推送</p>
 </blockquote>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> push 别名 分支名
-$ <span class="token function">git</span> push -u 别名 分支名	<span class="token comment" spellcheck="true"># -u指定默认主机</span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git push 别名 分支名
+$ git push -u 别名 分支名	# -u指定默认主机<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>克隆</p>
 </blockquote>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> clone <span class="token punctuation">[</span>远程地址<span class="token punctuation">]</span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git clone [远程地址]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
 <ul>
 <li>完整的把远程库下载到本地</li>
 <li>创建 origin 远程地址别名</li>
@@ -672,10 +668,10 @@ $ <span class="token function">git</span> push -u 别名 分支名	<span class="
 <blockquote>
 <p>拉取</p>
 </blockquote>
-<pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> pull<span class="token punctuation">[</span>远程仓库地址<span class="token punctuation">]</span> <span class="token punctuation">[</span>远程分支名<span class="token punctuation">]</span>
-$ <span class="token function">git</span> fetch<span class="token punctuation">[</span>远程仓库地址别名<span class="token punctuation">]</span> <span class="token punctuation">[</span>远程分支名<span class="token punctuation">]</span>
-$ <span class="token function">git</span> merge<span class="token punctuation">[</span>远程库地址别名/远程分支名<span class="token punctuation">]</span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git pull[远程仓库地址] [远程分支名]
+$ git fetch[远程仓库地址别名] [远程分支名]
+$ git merge[远程库地址别名&#x2F;远程分支名]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <ul>
 <li>pull &#x3D; fetch + merge</li>
 </ul>
@@ -750,7 +746,11 @@ $ <span class="token function">git</span> merge<span class="token punctuation">[
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -827,54 +827,18 @@ $ <span class="token function">git</span> merge<span class="token punctuation">[
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/02/09/word%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                <a href="/2023/02/09/Git/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Git">
                         
-                        <span class="card-title"></span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-09
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            dawncoody
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/02/09/test/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="test">
-                        
-                        <span class="card-title">test</span>
+                        <span class="card-title">Git</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -894,6 +858,60 @@ $ <span class="token function">git</span> merge<span class="token punctuation">[
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/02/09/word%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Word常用快捷键">
+                        
+                        <span class="card-title">Word常用快捷键</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            dawncoody
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                        <span class="chip bg-color">快捷键</span>
+                    </a>
+                    
                 </div>
                 
             </div>
